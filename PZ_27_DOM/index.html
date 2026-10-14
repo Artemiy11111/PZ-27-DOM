@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Планировщик задач — ПЗ 27</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <h1 id="page-title">Задачи на сегодня</h1>
+      <p class="intro">Управляйте задачами без перезагрузки страницы</p>
+      <form id="task-form">
+        <label for="task-input">Новая задача</label>
+        <div class="form-row">
+          <input
+            id="task-input"
+            maxlength="120"
+            placeholder="Например, проверить макет"
+            required
+          /><button type="submit">Добавить</button>
+        </div>
+        <p id="error" role="alert"></p>
+      </form>
+      <section aria-label="Список задач">
+        <h2>Список</h2>
+        <ul id="task-list">
+          <li class="task">
+            <span class="task-text">Изучить структуру DOM</span>
+            <div class="actions">
+              <button type="button" data-action="toggle">Готово</button
+              ><button type="button" data-action="up">Наверх</button
+              ><button type="button" data-action="remove">Удалить</button>
+            </div>
+          </li>
+          <li class="task">
+            <span class="task-text">Открыть инструменты разработчика</span>
+            <div class="actions">
+              <button type="button" data-action="toggle">Готово</button
+              ><button type="button" data-action="up">Наверх</button
+              ><button type="button" data-action="remove">Удалить</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <p id="stats" aria-live="polite">Всего: 2 · Выполнено: 0 · Осталось: 2</p>
+    </main>
+  </body>
+</html>
